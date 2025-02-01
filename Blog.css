@@ -6,6 +6,7 @@
     padding: 0px;
     box-sizing: border-box;
     font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif,sans-serif;
+    scroll-behavior: smooth;
 }
 h1{
     font-size: 50px;
@@ -55,27 +56,26 @@ body{
     height: 80px;
     margin-top: 1px;
 }
-
-#header ul{
+.navbar{
     display: flex;
+    justify-content: center;
     align-items: right;
-    justify-content:space-around;
+    gap: 20px;
 }
 
 #header ul li{
     list-style: none;
     padding: 0,5px;
     position: relative;
+  
 }
-
 #header ul li a{
     text-decoration: none;
     font-size: 22px;
     font-weight: 600;
     color: #1a1a1a;
-    transition:  0.3s ease;
-}
 
+}
 #header  ul li a:hover,
 #header ul li a.active{
     color: #088178;
@@ -90,6 +90,52 @@ body{
     position:absolute;
     bottom: -4px;
     left:20px;
+}
+
+.hamburger, .close-icon {
+    display: none;
+    font-size: 30px;
+    cursor: pointer;
+    padding: 10px;
+}
+/* Style for the dropdown */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #E3E6F3;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content li {
+    list-style-type: none;
+    padding: 12px 16px;
+}
+
+.dropdown-content li a {
+    color: black;
+    text-decoration: none;
+    display: block;
+}
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+#header img{
+    height: 70px;
+    width: 100px;
+    margin-left: -60px;
+    transition: 0.5s ease;
+}
+#header img:hover{
+    transform:scale(1.1); 
+
 }
 
 button.normal{
@@ -107,7 +153,6 @@ button.normal{
 }
 
 
-
 #header img{
     height: 70px;
     width: 100px;
@@ -117,20 +162,20 @@ button.normal{
 
 #header img:hover{
     transform:scale(1.1); 
-
 }
+
 #newsletter{
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
     align-items: center;
-    background-image: url(banner6.jpg);
+    background-image: url(Images/banner6.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: 100%;
-    height:133px;
-    
+    height:133px; 
 }
+
 #newsletter h4{
     font-size: 30px;
     font-weight: 700;
@@ -223,7 +268,7 @@ footer .follow .fa-youtube:hover{
     color:red;
 }
 footer a:hover{
-    color:#00cfc1
+    color:#cf006b
 }
 footer .install .row img{
     border: 1px solid #088178;
@@ -259,7 +304,7 @@ footer .copyright{
 
 
 #page-header{
-    background-image: url(banner7.jpg);
+    background-image: url(Images/banner7.jpg);
     width: 100%;
     height: 40vh;
     background-size: cover;
@@ -428,7 +473,7 @@ footer .copyright{
 
 
 #page-header.about-header{
-    background-image: url(banner.png);
+    background-image: url(Images/banner.png);
 }
 #about-head img{
     width: 35%;
@@ -712,5 +757,527 @@ background-color:#E3E6F3;
 
 
 
+
+
+
+
+
+
+
+
+
+
+.main {
+    height: 100vh; /* Adjust height for scrolling */
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    height: 100vh;
+    padding: 50px 0; /* Reduced top and bottom spacing */
+    margin-top: -400px;
+}
+
+
+/* Card Styling */
+.card {
+    background-color: white;
+    width: 800px;
+    height: 400px;
+    display: flex;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    border-radius: 50px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    animation: float 4s ease-in-out infinite;
+    margin: 0 auto; /* Ensure proper centering */
+}
+
+/* Hover Effect */
+.card:hover {
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Card Image Styling */
+.card-image {
+    width: 50%;
+    background-image: url('Images/Me.jpeg');
+    background-size: cover;
+    background-position: center;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-radius: 50px;
+}
+
+/* Card Content Styling */
+.card-content {
+    width: 50%;
+    padding: 40px;
+}
+
+.card-title {
+    font-size: 35px;
+    color:#0062ff; 
+    margin-bottom: 5px;
+    font-family:fantasy;
+    font-weight: 1300;
+}
+
+.card-subtitle {
+    font-size: 19px;
+    color: #666;
+    margin-bottom: 20px;
+    margin-left: 100px;
+}
+
+.card-info {
+    margin-bottom: 15px;
+    font-size: 14px;
+    color: #333;
+}
+
+.card-info-label {
+    font-weight: bold;
+    color: #1a237e;
+}
+
+/* Floating Animation */
+@keyframes float {
+    0%, 100% {
+        transform: translateY(-10px);
+    }
+    50% {
+        transform: translateY(10px);
+    }
+}
+.social-bar {
+    position: absolute;
+    text-decoration: none;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color:#c0d6f9; 
+    padding: 1px 0;
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    color: #ffffff;
+    font-size: 30px;
+    font-family: "IBM Plex Serif", serif;
+}
+.social-bar .fa-instagram:hover{
+    transition:0.5s ease;
+    transform:scale(1.1);  
+}
+.social-bar .fa-instagram{
+    text-decoration: none;
+    color: #ff00dd;
+    font-weight: 500;
+}
+.social-bar .fa-x-twitter{
+    text-decoration: none;
+    color: #000000;
+    font-weight: 500;
+}
+.social-bar .fa-x-twitter:hover{
+    transition:0.5s ease;
+    transform:scale(1.1);  
+
+}
+.social-bar .fa-linkedin:hover{
+    transition:0.5s ease;
+    transform:scale(1.1);  
+}
+.social-bar .fa-linkedin{
+    text-decoration: none;
+    color: #1864f0;
+    font-weight: 500;
+
+}
+.social-bar .fa-youtube:hover{
+    transition:0.5s ease;
+    transform:scale(1.1);  
+}
+.social-bar .fa-youtube{
+    text-decoration: none;
+    color: #ff0000;
+    font-weight: 500;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 428px) {
+    #header {
+        padding: 15px 20px;
+        height: 70px;
+    }
+
+    #header img {
+        height: 60px;
+        width: 90px;
+        margin-left: 0;
+    }
+
+    .hamburger {
+        display: block;
+        font-size: 30px;
+        margin-right: 10px;
+    }
+
+    .navbar {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        background-color: #E3E6F3;
+        box-shadow: 0 10px 20px rgba(0,0,0,0.06);
+        padding: 20px 0;
+        gap: 15px;
+    }
+
+    .navbar.active {
+        display: flex;
+    }
+
+    .navbar li {
+        text-align: center;
+        width: 100%;
+    }
+
+    .navbar li a {
+        font-size: 20px;
+        display: block;
+        padding: 10px 0;
+    }
+
+    .dropdown-content {
+        position: static;
+        display: block;
+        background: none;
+        box-shadow: none;
+    }
+
+    .dropdown:hover .dropdown-content {
+        display: block;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 428px) {
+#page-header h2{
+    font-size: 30px;
+    margin-top: 30px;
+} 
+#page-header p {
+    font-size: 30px;
+}
+}
+
+
+
+
+
+
+
+
+@media screen and (max-width: 428px) and (max-height: 926px) {
+    #blog {
+        padding: 50px 20px 0 20px; /* Reduce padding for smaller screens */
+    }
+
+    #blog .blog-box {
+        flex-direction: column; /* Stack elements vertically */
+        align-items: center;
+        padding-bottom: 50px; /* Reduce spacing */
+    }
+
+    #blog .blog-img {
+        width: 100%;
+        margin-right: 0;
+    }
+
+    #blog img {
+        width: 100%;
+        height: auto;
+    }
+
+    #blog .blog-details {
+        width: 100%;
+        text-align: center; /* Center-align text for better readability */
+        padding: 10px;
+    }
+
+    #blog .blog-details a {
+        font-size: 16px;
+        margin-left: 0;
+        display: inline-block;
+    }
+
+    #blog .blog-details a::after {
+        right: -40px; /* Adjust line positioning */
+    }
+
+    #blog .blog-box h1 {
+        font-size: 50px; /* Reduce heading size */
+        top: -65px;
+        margin-top: 10px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+/* Media Query for devices with screen size 428x926 */
+@media (max-width: 428px) {
+    #newsletter {
+        flex-direction: column;
+        height: auto;
+        padding: 20px;
+        align-items: flex-start;
+    }
+
+    #newsletter h4 {
+        font-size: 24px;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+    #newsletter p {
+        font-size: 12px;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+    #newsletter span {
+        font-size: 20px;
+    }
+
+    #newsletter input {
+        width: 100%;
+        margin-bottom: 10px;
+        height: 40px;
+    }
+
+    #newsletter button {
+        margin-left: 0;
+        width: 40%;
+        padding: 7px;
+        font-size: 16px;
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 428px) {
+    footer {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    footer .col {
+        align-items: center;
+        margin-bottom: 20px;
+    }
+
+    footer h4 {
+        font-size: 16px;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+    footer p {
+        font-size: 12px;
+        text-align: center;
+    }
+
+    footer a {
+        font-size: 14px;
+        text-align: center;
+        margin-bottom: 8px;
+    }
+
+    footer .follow .icon a {
+        font-size: 30px;
+        padding-right: 6px;
+    }
+
+    footer .install .row img,
+    footer .install .app img {
+        width: 80%;
+        margin: 10px 0;
+        margin-left: 22px;
+    }
+
+    footer .copyright {
+        font-size: 12px;
+        text-align: center;
+        margin-top: 20px;
+    }
+}
+
+@media (max-width: 428px){
+#page-header .know h2{ 
+     font-size: 20px;
+     margin-top: 100px;
+ }
+
+ #about-head .hi h2 {
+    margin-left: -45px;
+    font-size: 40px;
+    margin-top: -300px;
+ }
+ #about-head img{
+    height: 250px;
+    width: 520px;
+    margin-left: -180px;
+ }
+}
+
+
+
+
+
+
+@media (max-width: 428px){
+    #about-head marquee{
+        width: 100%;
+    }
+    #about-app{
+
+    }
+}
+
+
+
+
+
+
+
+
+
+/* Media Query for 428x926 Devices */
+@media only screen and (max-width: 428px) and (max-height: 926px) {
+
+    #about-app h1{
+        font-size: 20px;
+
+    }
+    /* Main Section */
+    .main {
+
+
+        flex-direction: column;
+        padding: 20px; /* Reduce padding for better fit */
+        margin-top: -300px;
+    }
+
+    .main h2{
+        font-size: 20px;
+        margin-bottom: -100px;
+    }
+
+    /* Card Styling */
+    .card {
+        flex-direction: column; /* Stack content vertically */
+        width: 100%; /* Full width */
+        height: auto; /* Auto height to fit content */
+        margin: 20px 0;
+        margin-top: 50px;
+        
+    }
+
+    /* Card Image Styling */
+    .card-image {
+        
+        width: 100%; /* Full width */
+        height: 200px; /* Adjust height */
+        border-radius: 10px 10px 0 0; /* Rounded corners at top */
+    }
+
+    /* Card Content Styling */
+    .card-content {
+        width: 100%;
+        padding: 20px; /* Adjust padding */
+        text-align: center; 
+        /* Center-align text */
+    }
+
+    .card-title {
+        font-size: 18px; /* Adjust font size */
+        font-family: "IBM Plex Serif", serif;
+    }
+
+    .card-subtitle {
+        font-size: 14px;
+        font-family: "IBM Plex Serif", serif;
+        margin-left: 0; /* Remove left margin */
+    }
+
+    .card-info {
+        font-size: 12px; /* Adjust font size */
+        font-family: "IBM Plex Serif", serif;
+        margin-bottom: 20px;
+    }
+
+    .card-info-label {
+        font-family: "IBM Plex Serif", serif;
+        font-size: 13px;
+    }
+
+    /* Greeting Styling */
+    .greeting {
+        font-size: 20px; /* Smaller font size */
+        font-family: "IBM Plex Serif", serif;
+        bottom: 110px; /* Adjust position */
+    }
+
+    /* Social Bar */
+    .social-bar {
+        flex-wrap: wrap; /* Wrap icons if needed */
+        gap: 20px; /* Reduce gap between icons */
+        font-family: "IBM Plex Serif", serif;
+        font-size: 24px; /* Reduce icon size */
+        padding: 10px; /* Adjust padding */
+    }
+}
 
 

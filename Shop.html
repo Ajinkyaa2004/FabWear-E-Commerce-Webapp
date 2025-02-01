@@ -12,22 +12,61 @@
 </head>
 
 <body>    
-    <script src="Index.js"></script>
-
+    <script src="index.js"></script>
     <section id="header">
-        <a href="#"><img src="Ajinkya.jpeg" class="logo"></a>
-        <div>
-            <ul id="navbar">
-                <li><a  href="Index.html">Home</a></li>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
-                <li> <a class="active" href="Shop.html">Shop</a></li>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
-                <li> <a href="Blog.html">Blog</a></li>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
-                <li> <a href="About.html">About Us</a></li>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
-                <li> <a href="Accessories.html">Accessories &#x25BE;</a></li>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
-                <li> <a href="Contact.html">Contact Us</a></li>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
-                <li> <a href="Cart.html"><i class="fa-solid fa-bag-shopping"></i></i></a></li>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
-            </ul>
-        </div>
+        <a href="#"><img src="Images/AwithoutBG.png" class="logo"></a>
+    
+        <!-- Hamburger Menu -->
+        <span class="hamburger">&#9776;</span>
+    
+        <ul class="navbar">
+            <!-- Close Icon -->
+            <span class="close-icon">&times;</span>
+    
+            <li><a  href="index.html">Home</a></li>
+            <li><a class="active" href="Shop.html">Shop</a></li>
+            <li><a href="Blog.html">Blog</a></li>
+            <li><a href="About.html">About Us</a></li>
+            <li class="dropdown">
+                <a href="Accessories.html">Accessories &#x25BE;</a>
+                <ul class="dropdown-content">
+                    <li><a href="Watches.html">Watches</a></li>
+                    <li><a href="Trousers.html">Trousers</a></li>
+                    <li><a href="Belts.html">Belts</a></li>
+                </ul>
+            </li>
+            <li><a href="Contact.html">Contact Us</a></li>
+            <li><a href="Cart.html"><i class="fa-solid fa-bag-shopping"></i></a></li>
+  
+        </ul>
     </section>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+          const hamburger = document.querySelector(".hamburger");
+          const navbar = document.querySelector(".navbar");
+      
+          // Toggle menu and change icon
+          hamburger.addEventListener("click", function () {
+              navbar.classList.toggle("active");
+              if (navbar.classList.contains("active")) {
+                  hamburger.innerHTML = "&times;"; // Change to close icon (×)
+              } else {
+                  hamburger.innerHTML = "&#9776;"; // Change back to hamburger (☰)
+              }
+          });
+      
+          // Close menu when a menu item is clicked
+          document.querySelectorAll(".navbar li a").forEach(item => {
+              item.addEventListener("click", function () {
+                  navbar.classList.remove("active");
+                  hamburger.innerHTML = "&#9776;"; // Reset to hamburger icon
+              });
+          });
+      });
+      
+      </script>    
+          
     
 
 <section id="page-header">
@@ -45,7 +84,7 @@
     <h4>Mens Wear.....</h4>
     <div class="container">
         <div class="pro" onclick="window.location.href='SingleP1.html';">
-             <img src="ff5.jpg">
+             <img src="Images/ff5.jpg">
              <div class="des">
                 <span>Gypsy</span>
                 <h5>Sea Drive</h5>
@@ -65,7 +104,7 @@
 
 
     <div class="pro">
-        <img src="ff2.jpg" onclick="window.location.href='SingleP2.html';">
+        <img src="Images/ff2.jpg" onclick="window.location.href='SingleP2.html';">
         <div class="des">
            <span>Gypsy</span>
            <h5>Carieee</h5>
@@ -83,7 +122,7 @@
 
 
 <div class="pro">
-    <img src="ff3.jpg"  onclick="window.location.href='SingleP3.html';">
+    <img src="Images/ff3.jpg"  onclick="window.location.href='SingleP3.html';">
     <div class="des">
        <span>Gypsy</span>
        <h5>No Doubt</h5>
@@ -101,7 +140,7 @@
 
 
 <div class="pro">
-    <img src="ff4.jpg" onclick="window.location.href='SingleP4.html';">
+    <img src="Images/ff4.jpg" onclick="window.location.href='SingleP4.html';">
     <div class="des">
        <span>Gypsy</span>
        <h5>Dark Jungle</h5>
@@ -120,7 +159,7 @@
 
 
 <div class="pro">
-    <img src="ff1.jpg"  onclick="window.location.href='SingleP5.html';">
+    <img src="Images/ff1.jpg"  onclick="window.location.href='SingleP5.html';">
     <div class="des">
        <span>Gypsy</span>
        <h5>Bluishh</h5>
@@ -138,7 +177,7 @@
 
 
 <div class="pro">
-    <img src="ff6.jpg"  onclick="window.location.href='SingleP6.html';">
+    <img src="Images/ff6.jpg"  onclick="window.location.href='SingleP6.html';">
     <div class="des">
        <span>Gypsy</span>
        <h5>Catty</h5>
@@ -156,7 +195,7 @@
 
 
 <div class="pro">
-    <img src="ff7.jpg" onclick="window.location.href='SingleP7.html';">
+    <img src="Images/ff7.jpg" onclick="window.location.href='SingleP7.html';">
     <div class="des">
        <span>Gypsy</span>
        <h5>Jewish</h5>
@@ -173,7 +212,7 @@
 </div>
 
 <div class="pro">
-    <img src="ff8.jpg" onclick="window.location.href='SingleP8.html';">
+    <img src="Images/ff8.jpg" onclick="window.location.href='SingleP8.html';">
     <div class="des">
        <span>Gypsy</span>
        <h5>Hypnoti</h5>
@@ -199,7 +238,7 @@
     <h4>Womens Wear.....</h4>
     <div class="container">
         <div class="pro" onclick="window.location.href='SingleP9.html';">
-             <img src="w1.jpg">
+             <img src="Images/w1.jpg">
              <div class="des">
                 <span>Gypsy</span>
                 <h5>Golden Teddy</h5>
@@ -217,7 +256,7 @@
 
 
     <div class="pro">
-        <img src="w2.jpg" onclick="window.location.href='SingleP10.html';">
+        <img src="Images/w2.jpg" onclick="window.location.href='SingleP10.html';">
         <div class="des">
            <span>Gypsy</span>
            <h5>Retro</h5>
@@ -234,7 +273,7 @@
 
 
 <div class="pro">
-    <img src="w3.jpg" onclick="window.location.href='SingleP11.html';">
+    <img src="Images/w3.jpg" onclick="window.location.href='SingleP11.html';">
     <div class="des">
        <span>Gypsy</span>
        <h5>Greenish</h5>
@@ -251,7 +290,7 @@
 
 
 <div class="pro">
-    <img src="w4.jpg" onclick="window.location.href='SingleP12.html';">
+    <img src="Images/w4.jpg" onclick="window.location.href='SingleP12.html';">
     <div class="des">
        <span>Gypsy</span>
        <h5>Grey Retro</h5>
@@ -268,7 +307,7 @@
 
 
 <div class="pro">
-    <img src="w5.jpg" onclick="window.location.href='SingleP13.html';">
+    <img src="Images/w5.jpg" onclick="window.location.href='SingleP13.html';">
     <div class="des">
        <span>Gypsy</span>
        <h5>GenZ Blue</h5>
@@ -285,7 +324,7 @@
 
 
 <div class="pro">
-    <img src="w6.jpg" onclick="window.location.href='SingleP14.html';">
+    <img src="Images/w6.jpg" onclick="window.location.href='SingleP14.html';">
     <div class="des">
        <span>Gypsy</span>
        <h5>Pinky Swan</h5>
@@ -302,7 +341,7 @@
 
 
 <div class="pro">
-    <img src="w7.jpg" onclick="window.location.href='SingleP15.html';">
+    <img src="Images/w7.jpg" onclick="window.location.href='SingleP15.html';">
     <div class="des">
        <span>Gypsy</span>
        <h5>Floral</h5>
@@ -318,7 +357,7 @@
 </div>
 
 <div class="pro">
-    <img src="w8.jpg" onclick="window.location.href='SingleP16.html';">
+    <img src="Images/w8.jpg" onclick="window.location.href='SingleP16.html';">
     <div class="des">
        <span>Gypsy</span>
        <h5>T Impressive</h5>
@@ -345,7 +384,7 @@
 
     <div class="container">
         <div class="pro" onclick="window.location.href='SinglePP1.html';">
-             <img src="p1.jpg">
+             <img src="Images/p1.jpg">
              <div class="des">
                 <span>Gypsy</span>
                 <h5>Sea Drive</h5>
@@ -365,7 +404,7 @@
 
 
     <div class="pro">
-        <img src="p2.jpg" onclick="window.location.href='SinglePP2.html';">
+        <img src="Images/p2.jpg" onclick="window.location.href='SinglePP2.html';">
         <div class="des">
            <span>Gypsy</span>
            <h5>Carieee</h5>
@@ -383,7 +422,7 @@
 
 
 <div class="pro">
-    <img src="p3.jpg"  onclick="window.location.href='SinglePP3.html';">
+    <img src="Images/p3.jpg"  onclick="window.location.href='SinglePP3.html';">
     <div class="des">
        <span>Gypsy</span>
        <h5>No Doubt</h5>
@@ -401,7 +440,7 @@
 
 
 <div class="pro">
-    <img src="p4.jpg" onclick="window.location.href='SinglePP4.html';">
+    <img src="Images/p4.jpg" onclick="window.location.href='SinglePP4.html';">
     <div class="des">
        <span>Gypsy</span>
        <h5>Dark Jungle</h5>
@@ -420,7 +459,7 @@
 
 
 <div class="pro">
-    <img src="p5.jpg"  onclick="window.location.href='SinglePP5.html';">
+    <img src="Images/p5.jpg"  onclick="window.location.href='SinglePP5.html';">
     <div class="des">
        <span>Gypsy</span>
        <h5>Bluishh</h5>
@@ -438,7 +477,7 @@
 
 
 <div class="pro">
-    <img src="p6.jpg"  onclick="window.location.href='SinglePP6.html';">
+    <img src="Images/p6.jpg"  onclick="window.location.href='SinglePP6.html';">
     <div class="des">
        <span>Gypsy</span>
        <h5>Catty</h5>
@@ -456,7 +495,7 @@
 
 
 <div class="pro">
-    <img src="p7.jpg" onclick="window.location.href='SinglePP7.html';">
+    <img src="Images/p7.jpg" onclick="window.location.href='SinglePP7.html';">
     <div class="des">
        <span>Gypsy</span>
        <h5>Jewish</h5>
@@ -473,7 +512,7 @@
 </div>
 
 <div class="pro">
-    <img src="p8.jpg" onclick="window.location.href='SinglePP8.html';">
+    <img src="Images/p8.jpg" onclick="window.location.href='SinglePP8.html';">
     <div class="des">
        <span>Gypsy</span>
        <h5>Hypnoti</h5>
@@ -499,7 +538,7 @@
     <h4>Womens Trouser Collections</h4>
     <div class="container">
         <div class="pro">
-             <img src="pp1.jpg">
+             <img src="Images/pp1.jpg">
              <div class="des">
                 <span>Gypsy</span>
                 <h5>Golden Teddy</h5>
@@ -517,7 +556,7 @@
 
 
     <div class="pro">
-        <img src="pp2.jpg">
+        <img src="Images/pp2.jpg">
         <div class="des">
            <span>Gypsy</span>
            <h5>Retro</h5>
@@ -534,7 +573,7 @@
 
 
 <div class="pro">
-    <img src="pp3.jpg">
+    <img src="Images/pp3.jpg">
     <div class="des">
        <span>Gypsy</span>
        <h5>Greenish</h5>
@@ -551,7 +590,7 @@
 
 
 <div class="pro">
-    <img src="pp5.jpg">
+    <img src="Images/pp5.jpg">
     <div class="des">
        <span>Gypsy</span>
        <h5>Grey Retro</h5>
@@ -568,7 +607,7 @@
 
 
 <div class="pro">
-    <img src="pp4.jpg">
+    <img src="Images/pp4.jpg">
     <div class="des">
        <span>Gypsy</span>
        <h5>GenZ Blue</h5>
@@ -585,7 +624,7 @@
 
 
 <div class="pro">
-    <img src="pp6.jpg">
+    <img src="Images/pp6.jpg">
     <div class="des">
        <span>Gypsy</span>
        <h5>Pinky Swan</h5>
@@ -602,7 +641,7 @@
 
 
 <div class="pro">
-    <img src="pp7.jpg">
+    <img src="Images/pp7.jpg">
     <div class="des">
        <span>Gypsy</span>
        <h5>Floral</h5>
@@ -618,7 +657,7 @@
 </div>
 
 <div class="pro">
-    <img src="pp8.jpg">
+    <img src="Images/pp8.jpg">
     <div class="des">
        <span>Gypsy</span>
        <h5>T Impressive</h5>
@@ -643,7 +682,7 @@
     <p>New Designs For Trendy Looks & Make Over</p>
     <div class="container">
         <div class="pro">
-             <img src="fff1.jpg">
+             <img src="Images/fff1.jpg">
              <div class="des">
                 <span>Gypsy</span>
                 <h5>Indigo</h5>
@@ -661,7 +700,7 @@
 
 
     <div class="pro">
-        <img src="ww2.jpg">
+        <img src="Images/ww2.jpg">
         <div class="des">
            <span>Gypsy</span>
            <h5>Squarax</h5>
@@ -678,7 +717,7 @@
 
 
 <div class="pro">
-    <img src="fff4.jpg">
+    <img src="Images/fff4.jpg">
     <div class="des">
        <span>Gypsy</span>
        <h5>Black-Suit</h5>
@@ -695,7 +734,7 @@
 
 
 <div class="pro">
-    <img src="ww3.jpg">
+    <img src="Images/ww3.jpg">
     <div class="des">
        <span>Gypsy</span>
        <h5>Line-Pink</h5>
@@ -712,7 +751,7 @@
 
 
 <div class="pro">
-    <img src="fff5.jpg">
+    <img src="Images/fff5.jpg">
     <div class="des">
        <span>Gypsy</span>
        <h5>Goldy</h5>
@@ -729,7 +768,7 @@
 
 
 <div class="pro">
-    <img src="ww1.jpg">
+    <img src="Images/ww1.jpg">
     <div class="des">
        <span>Gypsy</span>
        <h5>Pookie Florals</h5>
@@ -746,7 +785,7 @@
 
 
 <div class="pro">
-    <img src="fff7.jpg">
+    <img src="Images/fff7.jpg">
     <div class="des">
        <span>Gypsy</span>
        <h5>Jump-Suit</h5>
@@ -762,7 +801,7 @@
 </div>
 
 <div class="pro">
-    <img src="ww4.jpg">
+    <img src="Images/ww4.jpg">
     <div class="des">
        <span>Gypsy</span>
        <h5>Womens Decency</h5>
@@ -781,9 +820,6 @@
 </div>
 
 </section>
-
-
-
 
 <section id="pagination" class="section-p1">
     <a class="active" href="Shop.html">1</a>
@@ -804,7 +840,7 @@
 
 <footer class="section-p1">
 <div class="col">
-        <img class="logo"src="AwithoutBG.png">
+        <img class="logo"src="Images/AwithoutBG.png">
         <h4>Contact</h4>
         <p><strong>Address:</strong> 502,Street Pantonas, Mannheim, Germany </p>
         <p><strong>Phone:</strong> +91-90049 33771</p>
@@ -842,14 +878,14 @@
     <h4>Install App</h4>
     <p>From App Store Or Google Play Store</p>
     <div class="row">
-       <a href="https://play.google.com/store/games?hl=en" target="_blank"> <img src="playstore.jpg" alt=""> </a> 
+       <a href="https://play.google.com/store/games?hl=en" target="_blank"> <img src="Images/playstore.jpg" alt=""> </a> 
     </div>
         <div class="app">
-            <a href="https://www.apple.com/in/app-store/" target="_blank"> <img src="appstore.jpg" alt=""> </a> 
+            <a href="https://www.apple.com/in/app-store/" target="_blank"> <img src="Images/appstore.jpg" alt=""> </a> 
     </div>
 
     <p>Secure Payment Gateways</p>
-   <a href="#"><img src="pay.png" alt=""></a> 
+   <a href="#"><img src="Images/pay.png" alt=""></a> 
 </div>
 
 <div class="copyright">

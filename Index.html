@@ -7,34 +7,68 @@
     <title>E-Commerce Website</title>
     <link rel="stylesheet" type="text/css" href="Index.css">
     <script src="https://kit.fontawesome.com/a964bfb21f.js" crossorigin="anonymous"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-database.js"></script>
 
 
 </head>
 
 <body>    
-    <script src="Index.js"></script>
-
+    <script src="index.js"></script>
     <section id="header">
-        <a href="#"><img src="Ajinkya.jpeg" class="logo"></a>
-        <div> 
-            <ul class="navbar">
-                <li><a class="active" href="Index.html">Home</a></li>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
-                <li><a href="Shop.html">Shop</a></li>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
-                <li><a href="Blog.html">Blog</a></li>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
-                <li> <a href="About.html">About Us</a></li>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
-               <li><a href="Accessories.html">Accessories &#x25BE;</a>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
-                    <!-- <ul class="dropdown">
-                        <li><a href="Accessories.html">Footwear</a></li>
-                        <li><a href="Accessories.html">Trousers</a></li>
-                        <li><a href="Accessories.html">Watches</a></li>
-                    </ul> -->
-                    </li>
-                    <li> <a href="Contact.html">Contact Us</a></li>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
-                    <li> <a href="Cart.html"><i class="fa-solid fa-bag-shopping"></i></i></a></li>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
-            </ul>
-        </div>
- 
+        <a href="#"><img src="Images/AwithoutBG.png" class="logo"></a>
+    
+        <!-- Hamburger Menu -->
+        <span class="hamburger">&#9776;</span>
+    
+        <ul class="navbar">
+            <!-- Close Icon -->
+            <span class="close-icon">&times;</span>
+    
+            <li><a class="active" href="index.html">Home</a></li>
+            <li><a href="Shop.html">Shop</a></li>
+            <li><a href="Blog.html">Blog</a></li>
+            <li><a href="About.html">About Us</a></li>
+            <li class="dropdown">
+                <a href="Accessories.html">Accessories &#x25BE;</a>
+                <ul class="dropdown-content">
+                    <li><a href="Watches.html">Watches</a></li>
+                    <li><a href="Trousers.html">Trousers</a></li>
+                    <li><a href="Belts.html">Belts</a></li>
+                </ul>
+            </li>
+            <li><a href="Contact.html">Contact Us</a></li>
+            <li><a href="Cart.html"><i class="fa-solid fa-bag-shopping"></i></a></li>
+  
+        </ul>
     </section>
+    
+    
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const hamburger = document.querySelector(".hamburger");
+    const navbar = document.querySelector(".navbar");
+
+    // Toggle menu and change icon
+    hamburger.addEventListener("click", function () {
+        navbar.classList.toggle("active");
+        if (navbar.classList.contains("active")) {
+            hamburger.innerHTML = "&times;"; // Change to close icon (×)
+        } else {
+            hamburger.innerHTML = "&#9776;"; // Change back to hamburger (☰)
+        }
+    });
+
+    // Close menu when a menu item is clicked
+    document.querySelectorAll(".navbar li a").forEach(item => {
+        item.addEventListener("click", function () {
+            navbar.classList.remove("active");
+            hamburger.innerHTML = "&#9776;"; // Reset to hamburger icon
+        });
+    });
+});
+
+</script>    
+    
 
 <section id="hero">
     <h4>Trade-In-Offer</h4>
@@ -46,30 +80,29 @@
 
 <section id="feature" class="section-p1 "> 
     <div class="fe-box">
-        <img src="f1.png">
+        <img src="Images/f1.png">
         <h6>Free Shipping</h6>
     </div>
     <div class="fe-box">
-        <img src="f2.png">
+        <img src="Images/f2.png">
         <h6>Online Order</h6>
     </div>
     <div class="fe-box">
-        <img src="f3.png">
+        <img src="Images/f3.png">
         <h6>Save Money</h6>
     </div>
     <div class="fe-box">
-        <img src="f4.png">
-        <h6>Promotions</h6>
+        <img src="Images/f4.png">
+        <h6>Promo</h6>
     </div>
     <div class="fe-box">
-        <img src="f5.png">
+        <img src="Images/f5.png">
         <h6>Happy Sell</h6>
     </div>
     <div class="fe-box">
-        <img src="f6.png">
+        <img src="Images/f6.png">
         <h6>24/7 Support</h6>
     </div>
-
 </section>
 
 <section id="product1" class="section-p1">
@@ -80,7 +113,7 @@
     <h4>Mens Wear.....</h4>
     <div class="container">
         <div class="pro" onclick="window.location.href='SingleP1.html';">
-             <img src="ff5.jpg">
+             <img src="Images/ff5.jpg">
              <div class="des">
                 <span>Gypsy</span>
                 <h5>Sea Drive</h5>
@@ -100,7 +133,7 @@
 
 
     <div class="pro">
-        <img src="ff2.jpg"onclick="window.location.href='SingleP2.html';">
+        <img src="Images/ff2.jpg"onclick="window.location.href='SingleP2.html';">
         <div class="des">
            <span>Gypsy</span>
            <h5>Carieee</h5>
@@ -118,7 +151,7 @@
 
 
 <div class="pro">
-    <img src="ff3.jpg"onclick="window.location.href='SingleP3.html';">
+    <img src="Images/ff3.jpg"onclick="window.location.href='SingleP3.html';">
     <div class="des">
        <span>Gypsy</span>
        <h5>No Doubt</h5>
@@ -136,7 +169,7 @@
 
 
 <div class="pro">
-    <img src="ff4.jpg"onclick="window.location.href='SingleP4.html';">
+    <img src="Images/ff4.jpg"onclick="window.location.href='SingleP4.html';">
     <div class="des">
        <span>Gypsy</span>
        <h5>Dark Jungle</h5>
@@ -155,7 +188,7 @@
 
 
 <div class="pro">
-    <img src="ff1.jpg"onclick="window.location.href='SingleP5.html';">
+    <img src="Images/ff1.jpg"onclick="window.location.href='SingleP5.html';">
     <div class="des">
        <span>Gypsy</span>
        <h5>Bluishh</h5>
@@ -173,7 +206,7 @@
 
 
 <div class="pro">
-    <img src="ff6.jpg"onclick="window.location.href='SingleP6.html';">
+    <img src="Images/ff6.jpg"onclick="window.location.href='SingleP6.html';">
     <div class="des">
        <span>Gypsy</span>
        <h5>Catty</h5>
@@ -191,7 +224,7 @@
 
 
 <div class="pro">
-    <img src="ff7.jpg"onclick="window.location.href='SingleP7.html';">
+    <img src="Images/ff7.jpg"onclick="window.location.href='SingleP7.html';">
     <div class="des">
        <span>Gypsy</span>
        <h5>Jewish</h5>
@@ -208,7 +241,7 @@
 </div>
 
 <div class="pro">
-    <img src="ff8.jpg"onclick="window.location.href='SingleP8.html';">
+    <img src="Images/ff8.jpg"onclick="window.location.href='SingleP8.html';">
     <div class="des">
        <span>Gypsy</span>
        <h5>Hypnoti</h5>
@@ -234,7 +267,7 @@
     <h4>Womens Wear.....</h4>
     <div class="container">
         <div class="pro">
-             <img src="w1.jpg">
+             <img src="Images/w1.jpg">
              <div class="des">
                 <span>Gypsy</span>
                 <h5>Golden Teddy</h5>
@@ -252,7 +285,7 @@
 
 
     <div class="pro">
-        <img src="w2.jpg">
+        <img src="Images/w2.jpg">
         <div class="des">
            <span>Gypsy</span>
            <h5>Retro</h5>
@@ -269,7 +302,7 @@
 
 
 <div class="pro">
-    <img src="w3.jpg">
+    <img src="Images/w3.jpg">
     <div class="des">
        <span>Gypsy</span>
        <h5>Greenish</h5>
@@ -286,7 +319,7 @@
 
 
 <div class="pro">
-    <img src="w4.jpg">
+    <img src="Images/w4.jpg">
     <div class="des">
        <span>Gypsy</span>
        <h5>Grey Retro</h5>
@@ -303,7 +336,7 @@
 
 
 <div class="pro">
-    <img src="w5.jpg">
+    <img src="Images/w5.jpg">
     <div class="des">
        <span>Gypsy</span>
        <h5>GenZ Blue</h5>
@@ -320,7 +353,7 @@
 
 
 <div class="pro">
-    <img src="w6.jpg">
+    <img src="Images/w6.jpg">
     <div class="des">
        <span>Gypsy</span>
        <h5>Pinky Swan</h5>
@@ -337,7 +370,7 @@
 
 
 <div class="pro">
-    <img src="w7.jpg">
+    <img src="Images/w7.jpg">
     <div class="des">
        <span>Gypsy</span>
        <h5>Floral</h5>
@@ -353,7 +386,7 @@
 </div>
 
 <div class="pro">
-    <img src="w8.jpg">
+    <img src="Images/w8.jpg">
     <div class="des">
        <span>Gypsy</span>
        <h5>T Impressive</h5>
@@ -385,7 +418,7 @@
     <p>New Designs For Trendy Looks & Make Over</p>
     <div class="container">
         <div class="pro">
-             <img src="fff1.jpg">
+             <img src="Images/fff1.jpg">
              <div class="des">
                 <span>Gypsy</span>
                 <h5>Indigo</h5>
@@ -403,7 +436,7 @@
 
 
     <div class="pro">
-        <img src="ww2.jpg">
+        <img src="Images/ww2.jpg">
         <div class="des">
            <span>Gypsy</span>
            <h5>Squarax</h5>
@@ -420,7 +453,7 @@
 
 
 <div class="pro">
-    <img src="fff4.jpg">
+    <img src="Images/fff4.jpg">
     <div class="des">
        <span>Gypsy</span>
        <h5>Black-Suit</h5>
@@ -437,7 +470,7 @@
 
 
 <div class="pro">
-    <img src="ww3.jpg">
+    <img src="Images/ww3.jpg">
     <div class="des">
        <span>Gypsy</span>
        <h5>Line-Pink</h5>
@@ -454,7 +487,7 @@
 
 
 <div class="pro">
-    <img src="fff5.jpg">
+    <img src="Images/fff5.jpg">
     <div class="des">
        <span>Gypsy</span>
        <h5>Goldy</h5>
@@ -471,7 +504,7 @@
 
 
 <div class="pro">
-    <img src="ww1.jpg">
+    <img src="Images/ww1.jpg">
     <div class="des">
        <span>Gypsy</span>
        <h5>Pookie Florals</h5>
@@ -488,7 +521,7 @@
 
 
 <div class="pro">
-    <img src="fff7.jpg">
+    <img src="Images/fff7.jpg">
     <div class="des">
        <span>Gypsy</span>
        <h5>Jump-Suit</h5>
@@ -504,7 +537,7 @@
 </div>
 
 <div class="pro">
-    <img src="ww4.jpg">
+    <img src="Images/ww4.jpg">
     <div class="des">
        <span>Gypsy</span>
        <h5>Womens Decency</h5>
@@ -543,18 +576,18 @@
 
 <section id="banner3">
     <div class="banner-box"> 
-         <h2>Seasonal Sale</h2>
-        <h3>Winter Collection -50% OFF</h3>
+         <h2>Seasonal <span>Sale</span></h2>
+        <!-- <h3>Winter Collection -50% OFF</h3> -->
     </div>
 
    <div class="banner-box banner-box2"> 
-        <h2>Casual Wear</h2>
-        <h3>New Trends Available</h3>
+        <h2>Casual <span>Wear</span></h2>
+        <!-- <h3>New Trends Available</h3> -->
    </div>
 
    <div class="banner-box banner-box3"> 
-    <h2> New Footwears Collection </h2>
-   <h3>Spring / Summers 2024</h3>
+    <h3>Footwears <span>Collection</span> </h3>
+   <!-- <h3>Spring / Summers 2024</h3> -->
    </div>
 
 </section>
@@ -572,7 +605,7 @@
 
 <footer class="section-p1">
 <div class="col">
-        <img class="logo"src="AwithoutBG.png">
+        <img class="logo"src="Images/AwithoutBG.png">
         <h4>Contact</h4>
         <p><strong>Address:</strong> 502,Street Pantonas, Mannheim, Germany </p>
         <p><strong>Phone:</strong> +91-90049 33771</p>
@@ -610,14 +643,14 @@
     <h4>Install App</h4>
     <p>From App Store Or Google Play Store</p>
     <div class="row">
-       <a href="https://play.google.com/store/games?hl=en" target="_blank"> <img src="playstore.jpg" alt=""> </a> 
+       <a href="https://play.google.com/store/games?hl=en" target="_blank"> <img src="Images/playstore.jpg" alt=""> </a> 
     </div>
         <div class="app">
-            <a href="https://www.apple.com/in/app-store/" target="_blank"> <img src="appstore.jpg" alt=""> </a> 
+            <a href="https://www.apple.com/in/app-store/" target="_blank"> <img src="Images/appstore.jpg" alt=""> </a> 
     </div>
 
     <p>Secure Payment Gateways</p>
-   <a href="#"><img src="pay.png" alt=""></a> 
+   <a href="#"><img src="Images/pay.png" alt=""></a> 
 </div>
 
 <div class="copyright">
