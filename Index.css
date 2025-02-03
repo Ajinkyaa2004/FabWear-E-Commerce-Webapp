@@ -755,7 +755,7 @@ footer .copyright{
         flex-wrap: wrap;
         justify-content: space-between;
         width: 390px;
-        margin-left: -55px;
+        margin-left: -60px;
        /* Ensure the container takes up the full available width */
         padding: 0 10px; /* Adds minimal padding to the container */
     }
