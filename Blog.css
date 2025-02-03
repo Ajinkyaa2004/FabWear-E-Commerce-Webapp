@@ -1206,96 +1206,65 @@ background-color:#E3E6F3;
 
 
 
-@media screen and (max-width: 428px) and (max-height: 926px) {
-
-    /* Adjust table layout for small screens */
-    #cart table {
-        width: 100%;
-        table-layout: auto; /* Change table layout */
-        margin-left: -65px;
+@media screen and (max-width: 428px) {
+    .cart-container {
+        width: 95%;
+        margin: 10px auto;
+        padding: 15px;
+        
     }
 
-    #cart table img {
-        width: 50px;
-        height: auto; /* Adjust image size */
+    table {
+        font-size: 14px;
     }
 
-    #cart table td {
-        font-size: 12px; /* Decrease font size */
-        padding: 10px; /* Adjust padding */
+    th, td {
+        padding: 8px;
     }
 
-    #cart table td:nth-child(1),
-    #cart table td:nth-child(2),
-    #cart table td:nth-child(3),
-    #cart table td:nth-child(4),
-    #cart table td:nth-child(5),
-    #cart table td:nth-child(6) {
-        text-align: center;
+    input[type="number"] {
+        width: 40px;
     }
 
-    #cart table td:nth-child(5) input {
-        width: 50px;
-        padding: 5px 10px;
+    button {
+        padding: 8px 15px;
+        font-size: 14px;
     }
 
-    /* Adjust layout for the "cart-add" section */
-    #cart-add {
-        flex-direction: column; /* Stack elements vertically */
-        align-items: stretch; /* Stretch elements */
-    }
-
-    /* Coupon section adjustments */
-    #coupon {
-        width: 100%; /* Full width */
-        margin-bottom: 20px;
-    }
-
-    #coupon input {
-        width: 80%; /* Make input field smaller */
-        margin-bottom: 10px;
-    }
-
-    #coupon button {
-        width: 100%; /* Full-width button */
+    #checkout-btn {
+        font-size: 16px;
         padding: 12px;
     }
 
-    /* Subtotal section adjustments */
-    #Subtotal {
-        width: 100%;
-        margin-top: 20px;
-        padding: 20px;
-    }
-
-    #Subtotal table {
-        width: 100%; /* Ensure full-width table */
-    }
-
-    #Subtotal table td {
-        padding: 10px;
-        font-size: 12px; /* Smaller font size */
-    }
-
-    #Subtotal button {
-        width: 100%; /* Full-width button */
-        padding: 12px;
-    }
-
-    /* Adjust button layout */
-    #coupon button, #Subtotal button {
-        margin-top: 10px;
-    }
-
-    /* Hide certain columns on small screens for better visibility */
-    #cart table td:nth-child(3), /* Product name */
-    #cart table td:nth-child(4) { /* Price */
+    /* Hide table headers and make it look like a stacked list */
+    table thead {
         display: none;
     }
 
-    /* Adjust remove button for mobile */
-    #cart table td:nth-child(1) {
-        font-size: 16px;
+    table tbody tr {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+        border-bottom: 1px solid #ddd;
+        
     }
 
+    table tbody td {
+        border: none;
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        text-align: left;
+        padding: 5px 0;
+    }
+
+    table tbody td img {
+        width: 60px;
+    }
 }
+
+
+
+
+

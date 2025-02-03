@@ -602,17 +602,19 @@ footer .copyright{
 @media screen and (max-width: 428px) {
     #header {
         padding: 15px 20px;
-        height: 70px;
+        height: 65px;
     }
 
     #header img {
         height: 60px;
         width: 90px;
-        margin-left:0;
+        margin-left: 0;
     }
 
     .hamburger {
         display: block;
+        font-size: 30px;
+        margin-right: 10px;
     }
 
     .navbar {
@@ -643,16 +645,6 @@ footer .copyright{
         padding: 10px 0;
     }
 
-    .dropdown-content {
-        position: static;
-        display: block;
-        background: none;
-        box-shadow: none;
-    }
-
-    .dropdown:hover .dropdown-content {
-        display: block;
-    }
 }
 
 
@@ -763,7 +755,7 @@ footer .copyright{
         flex-wrap: wrap;
         justify-content: space-between;
         width: 390px;
-        margin-left: -60px;
+        margin-left: -55px;
        /* Ensure the container takes up the full available width */
         padding: 0 10px; /* Adds minimal padding to the container */
     }
