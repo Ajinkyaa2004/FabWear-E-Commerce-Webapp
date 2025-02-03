@@ -28,7 +28,6 @@
             <li><a href="About.html">About Us</a></li>
             <li><a href="Contact.html">Contact Us</a></li>
             <li><a class="active" href="Cart.html"><i class="fa-solid fa-bag-shopping"></i></a></li>
-  
         </ul>
     </section>
 
@@ -91,7 +90,76 @@
 
     <button id="checkout-btn">Proceed to Checkout</button>
 </div>
- 
+ <script>
+    document.addEventListener("DOMContentLoaded", function () {
+    displayCart();
+});
+
+function displayCart() {
+    let cart = JSON.parse(localStorage.getItem('cart')) || [];
+    let cartTable = document.querySelector('#cart tbody');
+    let totalAmount = 0;
+    let totalItems = 0;
+
+    if (!cartTable) return; // Prevent errors if cart table is not found
+
+    cartTable.innerHTML = ''; // Clear existing rows
+
+    cart.forEach((item, index) => {
+        let row = document.createElement('tr');
+        totalAmount += item.price * item.quantity;
+        totalItems += item.quantity;
+
+        row.innerHTML = `
+            <td><img src="${item.image}" width="50"></td>
+            <td>${item.name}</td>
+            <td>$${item.price.toFixed(2)}</td>
+            <td><input type="number" value="${item.quantity}" min="1" data-index="${index}" class="quantity-input"></td>
+            <td>$${(item.price * item.quantity).toFixed(2)}</td>
+            <td><button class="remove-btn" data-index="${index}">Remove</button></td>
+        `;
+
+        cartTable.appendChild(row);
+    });
+
+    document.querySelector('#total-price').innerText = `$${totalAmount.toFixed(2)}`;
+    document.querySelector('#total-items').innerText = totalItems;
+
+    // Attach event listeners for quantity update and item removal
+    document.querySelectorAll('.quantity-input').forEach(input => {
+        input.addEventListener('change', updateQuantity);
+    });
+
+    document.querySelectorAll('.remove-btn').forEach(button => {
+        button.addEventListener('click', removeItem);
+    });
+}
+
+// Function to update item quantity
+function updateQuantity(event) {
+    let index = event.target.getAttribute('data-index');
+    let cart = JSON.parse(localStorage.getItem('cart'));
+    cart[index].quantity = parseInt(event.target.value);
+    localStorage.setItem('cart', JSON.stringify(cart));
+    displayCart();
+}
+
+// Function to remove an item from the cart
+function removeItem(event) {
+    let index = event.target.getAttribute('data-index');
+    let cart = JSON.parse(localStorage.getItem('cart'));
+    cart.splice(index, 1);
+    localStorage.setItem('cart', JSON.stringify(cart));
+    displayCart();
+}
+
+// Clear the cart function
+function clearCart() {
+    localStorage.removeItem('cart');
+    displayCart();
+}
+
+ </script>
 
 
 

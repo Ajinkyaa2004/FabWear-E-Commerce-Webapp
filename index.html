@@ -107,6 +107,8 @@
     <p>Summer Collections New Modern Designs</p>
     <h4>Mens Wear.....</h4>
     <div class="container">
+
+
         <div class="pro">
             <img src="Images/ff5.jpg">
             <div class="des">
@@ -121,7 +123,7 @@
                 <h4>$80</h4>
             </div>
             <a href="#" class="add-to-cart-btn">
-                <i class="fa-solid fa-cart-plus"></i> Add to Cart
+                <i class="fa-solid fa-cart-plus"></i>
             </a>
         </div>
         
@@ -130,7 +132,7 @@
 
 
     <div class="pro">
-        <img src="Images/ff2.jpg"onclick="window.location.href='SingleP2.html';">
+        <img src="Images/ff2.jpg">
         <div class="des">
            <span>Gypsy</span>
            <h5>Carieee</h5>
@@ -138,8 +140,7 @@
             <i class="fa-solid fa-star"></i>
             <i class="fa-solid fa-star"></i>
             <i class="fa-solid fa-star"></i>
-            <i class="fa-solid fa-star"></i>
-               
+            <i class="fa-solid fa-star"></i>   
            </div>
            <h4>$80</h4>
         </div>
@@ -260,8 +261,6 @@
 </section>
 
 <script>
-    // Cart functionality script
-
 // Function to add a product to the cart
 function addToCart(event) {
     event.preventDefault();
@@ -285,8 +284,14 @@ function addToCart(event) {
 }
 
 // Attach event listeners to all "Add to Cart" buttons
-document.querySelectorAll('.pro a').forEach(button => {
-    button.addEventListener('click', addToCart);
+document.addEventListener('DOMContentLoaded', function() {
+    document.querySelectorAll('.pro a').forEach(button => {
+        button.addEventListener('click', addToCart);
+    });
+    
+    if (document.querySelector('#cart')) {
+        displayCart();
+    }
 });
 
 // Function to display cart items on the cart page
@@ -345,22 +350,7 @@ function removeItem(event) {
     displayCart();
 }
 
-// Initialize cart display if on cart page
-if (document.querySelector('#cart')) {
-    displayCart();
-}
-
-
 </script>
-
-
-
-
-
-
-
-
-
 
 
 <section id="product1" class="section-p1">
