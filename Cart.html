@@ -12,35 +12,96 @@
 
 <body>    
     <script src="index.js"></script>
-
     <section id="header">
         <a href="#"><img src="Images/AwithoutBG.png" class="logo"></a>
-        <div>
-            <ul class="navbar">
-                <li><a  href="index.html">Home</a></li>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
-                <li><a  href="Shop.html">Shop</a></li>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
-                <li><a href="Blog.html">Blog</a></li>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
-                <li><a href="About.html">About Us</a></li>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
-                <li class="dropdown">
-                    <a href="Accessories.html">Accessories &#x25BE;</a>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
-                    <ul class="dropdown-content">
-                        <li><a href="Watches.html">Watches</a></li>
-                        <li><a href="Trousers.html">Trousers</a></li>
-                        <li><a href="Belts.html">Belts</a></li>
-                    </ul>
-                </li>
-                <li><a href="Contact.html">Contact Us</a></li>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
-                <li><a class="active" href="Cart.html"><i class="fa-solid fa-bag-shopping"></i></a></li>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
-            </ul>
-        </div>
-    </section>
     
+        <!-- Hamburger Menu -->
+        <span class="hamburger">&#9776;</span>
+    
+        <ul class="navbar">
+            <!-- Close Icon -->
+            <span class="close-icon">&times;</span>
+    
+            <li><a  href="index.html">Home</a></li>
+            <li><a href="Shop.html">Shop</a></li>
+            <li><a href="Blog.html">Blog</a></li>
+            <li><a href="About.html">About Us</a></li>
+            <li><a href="Contact.html">Contact Us</a></li>
+            <li><a class="active" href="Cart.html"><i class="fa-solid fa-bag-shopping"></i></a></li>
+  
+        </ul>
+    </section>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+          const hamburger = document.querySelector(".hamburger");
+          const navbar = document.querySelector(".navbar");
+      
+          // Toggle menu and change icon
+          hamburger.addEventListener("click", function () {
+              navbar.classList.toggle("active");
+              if (navbar.classList.contains("active")) {
+                  hamburger.innerHTML = "&times;"; // Change to close icon (×)
+              } else {
+                  hamburger.innerHTML = "&#9776;"; // Change back to hamburger (☰)
+              }
+          });
+      
+          // Close menu when a menu item is clicked
+          document.querySelectorAll(".navbar li a").forEach(item => {
+              item.addEventListener("click", function () {
+                  navbar.classList.remove("active");
+                  hamburger.innerHTML = "&#9776;"; // Reset to hamburger icon
+              });
+          });
+      });
+      
+      </script>    
+
+<div class="cart-container">
+    <h2>Your Cart</h2>
+    
+    <!-- Cart Table -->
+    <table id="cart">
+        <thead>
+            <tr>
+                <th>Image</th>
+                <th>Product</th>
+                <th>Price</th>
+                <th>Quantity</th>
+                <th>Total</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+
+    <div id="Subtotal">
+        <table>
+            <tr>
+                <td>Total Items:</td>
+                <td id="total-items">0</td>
+            </tr>
+            <tr>
+                <td>Subtotal:</td>
+                <td id="total-price">$0.00</td>
+            </tr>
+        </table>
+    </div>
+
+    <button id="checkout-btn">Proceed to Checkout</button>
+</div>
+ 
+
+
+
+
 <section id="page-header" class=" about-header"> 
    <h2>#Lets Talk!</h2>
    <p> LEAVE A MESSAGE! We Love To Hear From You!  </p>
 </section>
 
-<section id="cart" class="section-p1">
+<!-- <section id="cart" class="section-p1">
     <table width="100%">
         <thead>
             <tr>
@@ -55,7 +116,7 @@
         <tbody>
             <tr>
                 <td><a href="Shop.html"><i class="fa-solid fa-xmark"></i></a></td>
-                <td><img src="ff1.jpg" alt=""></td>
+                <td><img src="Images/ff1.jpg" alt=""></td>
                 <td>Cotton Printed T-Shirt</td>
                 <td>$80</td>
                 <td><input type="number" value="1"></td>
@@ -64,7 +125,7 @@
 
             <tr>
                 <td><a href="Shop.html"><i class="fa-solid fa-xmark"></i></a></td>
-                <td><img src="ff2.jpg" alt=""></td>
+                <td><img src="Images/ff2.jpg" alt=""></td>
                 <td>Cotton Printed T-Shirt</td>
                 <td>$80</td>
                 <td><input type="number" value="1"></td>
@@ -73,7 +134,7 @@
 
             <tr>
                 <td><a href="Shop.html"><i class="fa-solid fa-xmark"></i></a></td>
-                <td><img src="ff3.jpg" alt=""></td>
+                <td><img src="Images/ff3.jpg" alt=""></td>
                 <td>Cotton Printed T-Shirt</td>
                 <td>$80</td>
                 <td><input type="number" value="1"></td>
@@ -81,9 +142,9 @@
             </tr>
         </tbody>
     </table>
-</section>
+</section> -->
 
-<section id="cart-add" class="section-p1">
+<!-- <section id="cart-add" class="section-p1">
     <div id="coupon">
         <h3>Apply Coupon</h3>
         <div> 
@@ -113,11 +174,11 @@
 
     </div>
 
-</section>
+</section> -->
 
 <footer class="section-p1">
 <div class="col">
-        <img class="logo"src="AwithoutBG.png">
+        <img class="logo"src="Images/oAwithoutBG.png">
         <h4>Contact</h4>
         <p><strong>Address:</strong> 502,Street Pantonas, Mannheim, Germany </p>
         <p><strong>Phone:</strong> +91-90049 33771</p>
@@ -155,14 +216,14 @@
     <h4>Install App</h4>
     <p>From App Store Or Google Play Store</p>
     <div class="row">
-       <a href="https://play.google.com/store/games?hl=en" target="_blank"> <img src="playstore.jpg" alt=""> </a> 
+       <a href="https://play.google.com/store/games?hl=en" target="_blank"> <img src="Images/playstore.jpg" alt=""> </a> 
     </div>
         <div class="app">
-            <a href="https://www.apple.com/in/app-store/" target="_blank"> <img src="appstore.jpg" alt=""> </a> 
+            <a href="https://www.apple.com/in/app-store/" target="_blank"> <img src="Images/appstore.jpg" alt=""> </a> 
     </div>
 
     <p>Secure Payment Gateways</p>
-   <a href="#"><img src="pay.png" alt=""></a> 
+   <a href="#"><img src="Images/pay.png" alt=""></a> 
 </div>
 
 <div class="copyright">

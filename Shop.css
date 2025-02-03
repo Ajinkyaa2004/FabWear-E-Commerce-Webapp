@@ -98,34 +98,6 @@ body{
     cursor: pointer;
     padding: 10px;
 }
-/* Style for the dropdown */
-.dropdown {
-    position: relative;
-    display: inline-block;
-}
-
-.dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #E3E6F3;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
-    z-index: 1;
-}
-
-.dropdown-content li {
-    list-style-type: none;
-    padding: 12px 16px;
-}
-
-.dropdown-content li a {
-    color: black;
-    text-decoration: none;
-    display: block;
-}
-.dropdown:hover .dropdown-content {
-    display: block;
-}
 
 #header img{
     height: 70px;
@@ -650,7 +622,7 @@ footer .copyright{
         flex-wrap: wrap;
         justify-content: space-between;
         width: 390px;
-        margin-left: -80px;
+        margin-left: -70px;
        /* Ensure the container takes up the full available width */
         padding: 0 10px; /* Adds minimal padding to the container */
     }

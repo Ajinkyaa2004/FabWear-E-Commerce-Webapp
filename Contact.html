@@ -5,35 +5,60 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>E-Commerce Website</title>
-    <link rel="stylesheet" type="text/css" href="Blog.css">
+    <link rel="stylesheet" type="text/css" href="Contact.css">
     <script src="https://kit.fontawesome.com/a964bfb21f.js" crossorigin="anonymous"></script>
 
 </head>
-
 <body>    
     <script src="index.js"></script>
 
     <section id="header">
         <a href="#"><img src="Images/AwithoutBG.png" class="logo"></a>
-        <div>
-            <ul class="navbar">
-                <li><a  href="index.html">Home</a></li>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
-                <li><a  href="Shop.html">Shop</a></li>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
-                <li><a href="Blog.html">Blog</a></li>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
-                <li><a href="About.html">About Us</a></li>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
-                <li class="dropdown">
-                    <a href="Accessories.html">Accessories &#x25BE;</a>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
-                    <ul class="dropdown-content">
-                        <li><a href="Watches.html">Watches</a></li>
-                        <li><a href="Trousers.html">Trousers</a></li>
-                        <li><a href="Belts.html">Belts</a></li>
-                    </ul>
-                </li>
-                <li><a class="active"href="Contact.html">Contact Us</a></li>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
-                <li><a href="Cart.html"><i class="fa-solid fa-bag-shopping"></i></a></li>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
-            </ul>
-        </div>
+    
+        <!-- Hamburger Menu -->
+        <span class="hamburger">&#9776;</span>
+    
+        <ul class="navbar">
+            <!-- Close Icon -->
+            <span class="close-icon">&times;</span>
+    
+            <li><a href="index.html">Home</a></li>
+            <li><a href="Shop.html">Shop</a></li>
+            <li><a href="Blog.html">Blog</a></li>
+            <li><a href="About.html">About Us</a></li>
+            <li><a class="active" href="Contact.html">Contact Us</a></li>
+            <li><a href="Cart.html"><i class="fa-solid fa-bag-shopping"></i></a></li>
+  
+        </ul>
     </section>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+          const hamburger = document.querySelector(".hamburger");
+          const navbar = document.querySelector(".navbar");
+      
+          // Toggle menu and change icon
+          hamburger.addEventListener("click", function () {
+              navbar.classList.toggle("active");
+              if (navbar.classList.contains("active")) {
+                  hamburger.innerHTML = "&times;"; // Change to close icon (×)
+              } else {
+                  hamburger.innerHTML = "&#9776;"; // Change back to hamburger (☰)
+              }
+          });
+      
+          // Close menu when a menu item is clicked
+          document.querySelectorAll(".navbar li a").forEach(item => {
+              item.addEventListener("click", function () {
+                  navbar.classList.remove("active");
+                  hamburger.innerHTML = "&#9776;"; // Reset to hamburger icon
+              });
+          });
+      });
+      
+      </script> 
+
+
     
 <section id="page-header" class=" about-header"> 
    <h2>#Lets Talk!</h2>
