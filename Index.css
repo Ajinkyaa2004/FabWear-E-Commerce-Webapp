@@ -660,8 +660,7 @@ footer .copyright{
         align-items: center; /* Center content */
         /* background-position:center; */
         background-position-y:center;
-        width: 440px;
-         /* Adjust background image */
+        width: 100vh; /* Adjust background image */
     }
 
     #hero h4 {
