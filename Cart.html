@@ -57,38 +57,33 @@
       
       </script>    
 
-<div class="cart-container">
+<div class="container">
     <h2>Your Cart</h2>
-    
-    <!-- Cart Table -->
     <table id="cart">
         <thead>
             <tr>
                 <th>Image</th>
+                <th>Product</th>
                 <th>Price</th>
                 <th>Quantity</th>
                 <th>Total</th>
                 <th>Action</th>
             </tr>
         </thead>
-        <tbody></tbody>
+        <tbody>
+            <!-- Cart items will be dynamically inserted here -->
+        </tbody>
     </table>
-
-    <div id="Subtotal">
-        <table>
-            <tr>
-                <td>Total Items:</td>
-                <td id="total-items">0</td>
-            </tr>
-            <tr>
-                <td>Subtotal:</td>
-                <td id="total-price">$0.00</td>
-            </tr>
-        </table>
+    <div class="summary">
+        <p>Total Items: <span id="total-items">0</span></p>
+        <p>Total Price: <span id="total-price">$0.00</span></p>
     </div>
-
-    <button id="checkout-btn">Proceed to Checkout</button>
+    <button class="checkout-btn">Proceed to Checkout</button>
 </div>
+<script>
+    document.addEventListener('DOMContentLoaded', displayCart);
+</script>
+
  <script>
     document.addEventListener("DOMContentLoaded", function () {
     displayCart();
