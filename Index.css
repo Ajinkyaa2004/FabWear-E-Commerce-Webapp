@@ -103,8 +103,8 @@ body{
     height: 90vh;
     width: 100vw;
     background-size: cover; 
-    background-position: top 25% right 0%;
-    padding:0 80px;
+    background-position: 90% 0%;
+    padding:0 10px;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -659,34 +659,40 @@ footer .copyright{
         text-align: center; /* Center align text */
         align-items: center; /* Center content */
         /* background-position:center; */
-        background-position-y:center;
-        width: 100vh; /* Adjust background image */
+        /* background-position-y:center; */
+        width: 100vw; /* Adjust background image */
     }
 
     #hero h4 {
         font-size: 18px; /* Reduce font size */
         padding-bottom: 10px;
+        margin-left: 150px;
        
     }
 
     #hero h2 {
         font-size: 24px;
+        margin-left: 150px;
          /* Adjust heading size */
     }
 
     #hero h1 {
         font-size: 26px; /* Adjust main heading */
+        margin-left: 150px;
     }
 
     #hero p {
         font-size: 16px; /* Reduce paragraph font size */
-        color:#00cec0;
+        color:#038b82;
+        margin-left: 150px;
+        
     }
 
     #hero button {
         font-size: 18px; /* Adjust button font size */
         padding: 12px 60px 12px 50px; /* Reduce padding */
         background-size: contain; /* Adjust button background */
+        margin-left: 150px;
     }
 }
 
