@@ -599,7 +599,7 @@ footer .copyright{
 
 
 
-@media screen and (max-width: 428px) {
+@media screen and (max-width: 390px) {
     #header {
         padding: 15px 20px;
         height: 65px;
@@ -652,7 +652,7 @@ footer .copyright{
 
 
 
-@media screen and (max-width: 428px) {
+@media screen and (max-width: 390px) {
     #hero {
         height: 80vh; /* Adjust height for better fit */
         padding: 0 20px; /* Reduce padding for small screens */
