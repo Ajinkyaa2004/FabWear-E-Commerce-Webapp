@@ -603,6 +603,7 @@ footer .copyright{
     #header {
         padding: 15px 20px;
         height: 65px;
+        width: 100%;
     }
 
     #header img {
