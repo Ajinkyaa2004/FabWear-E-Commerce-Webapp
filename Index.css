@@ -724,65 +724,39 @@ footer .copyright{
 
 
 
-@media screen and (max-width: 926px) {
+@media screen and (max-width: 390px) {
     #product1 .container {
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
-        width: 100%; /* Ensure the container takes up the full available width */
-        padding: 0 20px; /* Adds small padding to prevent elements from touching edges */
+        width: 400px; /* Ensure full width */
+        padding: 0 10px; /* Minimal padding */
+        margin-left: -62px; /* Center content */
+
     }
 
     #product1 .pro {
-        width: calc(50% - 10px); /* Each product takes 50% of the container width, leaving a gap */
-        margin-bottom: 20px; /* Gap between rows */
+        width: calc(50% - 8px); /* Adjust spacing for better fit */
+        margin-bottom: 15px; /* Reduce gap slightly */
+        padding: 10px 8px; /* Adjust padding */
     }
 
     #product1 .pro img {
-        width: 100%; /* Make images responsive */
-    }
-
-    /* Optional: Adjust the button for small screens */
-    #product1.section-p1 button.more {
-        margin-left: auto;
-        margin-right: auto;
-        display: block;
-    }
-}
-
-@media screen and (max-width: 428px) {
-    #product1 .container {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        width: 390px;
-        margin-left: -60px;
-       /* Ensure the container takes up the full available width */
-        padding: 0 10px; /* Adds minimal padding to the container */
-    }
-
-    #product1 .pro {
-        width: calc(50% - 10px); /* Each product takes 50% of the container width */
-        margin-bottom: 20px; /* Gap between rows */
-        padding: 15px 10px; /* Adjust padding for smaller screens */
-    }
-
-    #product1 .pro img {
-        width: 100%; /* Make images responsive */
+        width: 100%; /* Responsive images */
+        height: auto;
     }
 
     #product1 .pro .des h4 {
-        font-size: 20px; /* Adjust font size for smaller screens */
+        font-size: 18px; /* Slightly smaller for iPhone readability */
     }
 
-    /* Optional: Adjust the button for small screens */
+    /* Adjust button for centered alignment */
     #product1.section-p1 button.more {
-        margin-left: auto;
-        margin-right: auto;
+        margin: 10px auto;
         display: block;
+        width: 80%; /* Ensure it’s not too wide */
     }
 }
-
 
 
 
