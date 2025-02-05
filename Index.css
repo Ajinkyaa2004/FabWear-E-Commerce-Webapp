@@ -32,7 +32,7 @@ p{
     margin:15px 0 20px 0;
 }
 .section-p1{
-    padding:40px 80px;
+    padding:10px 10px;
 }
 .section-m1{
     margin: 40px 0;
@@ -101,7 +101,7 @@ body{
 #hero{
     background-image: url("Images/BigB.png");
     height: 90vh;
-    width: 100%;
+    width: 100vw;
     background-size: cover; 
     background-position: top 25% right 0%;
     padding:0 80px;
@@ -729,9 +729,9 @@ footer .copyright{
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
-        width: 400px; /* Ensure full width */
+        width: 40; /* Ensure full width */
         padding: 0 10px; /* Minimal padding */
-        margin-left: -62px; /* Center content */
+        /* Center content */
 
     }
 
