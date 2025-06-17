@@ -19,3 +19,6 @@ Fab Wear — E-Commerce Website
 - **Frontend:** HTML, CSS, JavaScript
 - **State Management:** Local Storage
 - **Deployment:** Vercel
+
+
+🔗 https://itsajinkya.vercel.app | 📫 https://www.linkedin.com/in/ajinkya2004
