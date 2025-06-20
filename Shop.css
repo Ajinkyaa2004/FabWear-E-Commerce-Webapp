@@ -444,6 +444,7 @@ footer .copyright{
     font-size: 12px;
     font-weight: 600;
 }
+
 #prodetails .single-pro-image{
     width:30%;
     margin-right: 50px;
@@ -511,6 +512,72 @@ footer .copyright{
 #prodetails .single-pro-details span{
     line-height: 50px;
     font-size: 25px;
+}
+
+
+
+
+
+
+@media only screen and (max-width: 390px) {
+    #prodetails {
+        flex-direction: column;
+        padding: 10px;
+        margin-top: 10px;
+    }
+
+    #prodetails .single-pro-image {
+        width: 100%;
+        margin-right: 0;
+    }
+
+    .small-img-group {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        width: 100%;
+        height: auto;
+        gap: 10px;
+    }
+
+    .small-img-col {
+        flex: 1 0 45%;
+        margin-bottom: 10px;
+    }
+
+    #prodetails .single-pro-details {
+        width: 100%;
+        padding-top: 20px;
+    }
+
+    #prodetails .single-pro-details h2 {
+        font-size: 22px;
+    }
+
+    #prodetails .single-pro-details h4 {
+        font-size: 18px;
+        padding: 20px 0 10px 0;
+    }
+
+    #prodetails .single-pro-details select,
+    #prodetails .single-pro-details input {
+        width: 100%;
+        font-size: 14px;
+        height: 42px;
+        margin-bottom: 10px;
+    }
+
+    #prodetails .single-pro-details .cart {
+        width: 100%;
+        padding: 12px;
+        font-size: 15px;
+        margin: 12px 0;
+    }
+
+    #prodetails .single-pro-details span {
+        font-size: 18px;
+        line-height: 30px;
+    }
 }
 
 
