@@ -395,7 +395,7 @@ button.white {
     flex-direction: column;
     justify-content: center;
     align-items:flex-start;  
-    background-image: url(Images/banner3.jpg);
+    background-image: url(Images/Banner3.jpg);
     min-width: 30%;
     height: 30vh;
     background-size: cover;
@@ -422,7 +422,7 @@ button.white {
    
 }
 #banner3 .banner-box2{
-    background-image: url(Images/banner4.jpg);
+    background-image: url(Images/Banner4.jpg);
     transition: 0.5s ease;
 }
 #banner3 .banner-box3{
