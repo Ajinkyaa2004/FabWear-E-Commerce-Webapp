@@ -449,70 +449,6 @@ footer .copyright{
 
 
 
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f8f8f8;
-}
-.container {
-    width: 90%;
-    max-width: 800px;
-    margin: 20px auto;
-    background: white;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-}
-table {
-    width: 100%;
-    border-collapse: collapse;
-}
-th, td {
-    padding: 10px;
-    text-align: center;
-    border-bottom: 1px solid #ddd;
-}
-img {
-    width: 50px;
-    height: auto;
-}
-input[type="number"] {
-    width: 50px;
-}
-.remove-btn {
-    background-color: red;
-    color: white;
-    border: none;
-    padding: 5px 10px;
-    cursor: pointer;
-}
-.summary {
-    text-align: right;
-    margin-top: 20px;
-}
-.checkout-btn {
-    background-color: green;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    cursor: pointer;
-    display: block;
-    margin: 20px auto;
-    text-align: center;
-}
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -559,16 +495,18 @@ input[type="number"] {
 
 button {
     padding: 10px 20px;
-    background-color: #007bff;
-    color: #fff;
+    background-color:#088178;
+    color: #ffffff;
     border: none;
     cursor: pointer;
+    transition: 0.2s;
     border-radius: 5px;
     font-size: 16px;
 }
 
 button:hover {
-    background-color: #0056b3;
+    background-color:#E3E6F3;
+    color: rgb(0, 0, 0);
 }
 
 #Subtotal {
@@ -579,12 +517,22 @@ button:hover {
     padding: 5px;
 }
 
-#checkout-btn {
-    margin-top: 20px;
-    display: block;
-    width: 100%;
+.container {
+    width: 90%;
+    max-width: 800px;
+    margin: 20px auto;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
 }
-
+.remove-btn {
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+}
 
 
 
@@ -931,15 +879,6 @@ button:hover {
 
 
 
-
-
-
-
-
-
-
-
-
 .foot{
     background-color: #E3E6F3;
 }
@@ -1053,7 +992,6 @@ footer .copyright{
     margin-left: -180px;
  }
 }
-
 
 
 

@@ -322,6 +322,7 @@ button.normal {
     background-color: #088178;
     color: white;
 }
+
 #sm-banner .banner-box{
     display: flex;
     flex-direction: column;
@@ -332,7 +333,7 @@ button.normal {
     height: 50vh;
     background-size: cover;
     background-position: center;
-    padding: 30px;
+    padding: 65px;
     transition: 0.5s ease;
 }
 #sm-banner .banner-box:hover{
